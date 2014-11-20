@@ -1,0 +1,15 @@
+div#main{
+    width: 800px;
+    margin: 0 auto;
+}
+
+div#header{
+    min-height: 100px;
+}
+
+div#content{
+    margin-bottom: 10px;
+}
+
+div#footer{
+}
