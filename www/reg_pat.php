@@ -34,9 +34,15 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label class="col-sm-2 control-label">День рождения</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="birthday">
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label class="col-sm-2 control-label">Email</label>
                         <div class="col-sm-10">
-                            <input type="mail" class="form-control" name="email">
+                            <input type="email" class="form-control" name="email">
                         </div>
                     </div>
                     <div class="form-group">
@@ -52,15 +58,9 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">День рождения</label>
-                        <div class="col-sm-10">
-                            <input type="password" class="form-control" name="birthday">
-                        </div>
-                    </div>
-                    <div class="form-group">
                         <label class="col-sm-2 control-label">Номер телефона</label>
                         <div class="col-sm-10">
-                            <input type="password" class="form-control" name="phone">
+                            <input type="text" class="form-control" name="phone">
                         </div>
                     </div>
                     <div class="form-group">
@@ -77,11 +77,26 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label class="col-sm-2 control-label">Город</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" name="city">
+                                <?php
+                                    $res = $con->query("SELECT city_id, city_name from city_list");
+                                    while($data = $res->fetch(PDO::FETCH_ASSOC)){
+                                        echo "<option value='". $data["city_id"] ."'>". $data["city_name"] ."</option>";
+                                    };
+                                ?>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
                             <button type="submit" class="btn btn-default">Зарегестрироваться</button>
                         </div>
                     </div>
                 </form>
+            </div>
+            <div id="footer">
             </div>
         </div>
     </body>
