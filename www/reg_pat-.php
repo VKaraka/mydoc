@@ -5,7 +5,6 @@
     $lastName = $_POST["lastname"];
     $patronymic = $_POST["patro"];
     $birthday = $_POST["birthday"];
-    $birthday = "11-11-1990"; //ПОКА ДЛЯ ТЕСТА
     $email = $_POST["email"];
     $password = $_POST["pass"];
     $password2 = $_POST["pass2"];

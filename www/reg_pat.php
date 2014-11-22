@@ -8,6 +8,15 @@
             $title = "Регистрация пациента";
             require_once "header.php";
         ?>
+        <script>
+            $(function() {
+                $("input[name='birthday']").datepicker({
+                    changeMonth: true,
+                    changeYear: true
+                });
+                $("input[name='birthday']").datepicker("option", "dateFormat", "yy-mm-dd");
+            });
+        </script>
     </head>
     <body>
         <div id="main">
